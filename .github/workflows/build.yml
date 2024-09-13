@@ -2,6 +2,19 @@ name: build
 on: push
 
 jobs:
+
+  test:
+    runs-on: ubuntu-latest
+    steps :
+      - name: copier code Github vers notre serveur ubuntu
+        uses: actions/checkout@v3
+      - name: installer node.js vers notre serveur ubuntu
+        uses: actions/setup-node@v3
+      - name: installer les packages JS
+        run: npm install
+      - name: build l'application JS
+        run: test
+  
   build: 
     runs-on: ubuntu-latest
     steps :
