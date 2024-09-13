@@ -12,7 +12,7 @@ jobs:
         uses: actions/setup-node@v3
       - name: installer les packages JS
         run: npm install
-      - name: build l'application JS
+      - name: test l'application JS
         run: test
   
   build: 
