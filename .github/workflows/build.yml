@@ -6,19 +6,19 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps :
-      - name: copier code Github vers notre serveur ubuntu
+      - name: copier code depui Github vers notre serveur ubuntu
         uses: actions/checkout@v3
       - name: installer node.js vers notre serveur ubuntu
         uses: actions/setup-node@v3
       - name: installer les packages JS
         run: npm install
-      - name: test l'application JS
-        run: test
+      - name: lancer la politique de test disponible
+        run: npm test
   
   build: 
     runs-on: ubuntu-latest
     steps :
-      - name: copier code Github vers notre serveur ubuntu
+      - name: copier code depuis Github vers notre serveur ubuntu
         uses: actions/checkout@v3
       - name: installer node.js vers notre serveur ubuntu
         uses: actions/setup-node@v3
